@@ -12,7 +12,7 @@ def delete():
 
 def edit():
     tasks.delete(ANCHOR)
-    tasks.insert(0,"✍ "+ t)
+    tasks.insert(ANCHOR,"✍ " + entryBox.get())
 
 
 def add():
@@ -22,9 +22,11 @@ def add():
     else:
         tasks.delete(0, t)
 def markcompleted():
+    k=tasks.curselection()
+    m=tasks.get(k)
 
     tasks.delete(ANCHOR)
-    tasks.insert(ANCHOR,t + "  ✔")
+    tasks.insert(ANCHOR,m + "  ✔")
 
 def exit():
     display.destroy()
