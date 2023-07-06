@@ -12,7 +12,7 @@ def delete():
 
 def edit():
     tasks.delete(ANCHOR)
-    tasks.insert(0,"✍ "+ entryBox.get())
+    tasks.insert(0,"✍ "+ t)
 
 
 def add():
